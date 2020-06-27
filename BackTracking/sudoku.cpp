@@ -49,7 +49,7 @@ bool isSafe(int grid[n][n], int row, int col, int num) {
     return false;
 }
 
-bool solveSudoku(int grid[n][n]) {
+bool solveSudoku(int grid[][9]) {
     int row, col;
     if(!findEmpty(grid, row, col)) {
         return true;
