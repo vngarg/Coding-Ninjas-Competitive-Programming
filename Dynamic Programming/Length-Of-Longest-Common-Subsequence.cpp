@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int lcsHelper(char* s1, char* s2, int m, int n, int** arr) {
+int lcsHelper(string s1, string s2, int m, int n, int** arr) {
     if(m == 0 || n == 0)
         return 0;
 
@@ -10,19 +10,19 @@ int lcsHelper(char* s1, char* s2, int m, int n, int** arr) {
 
     int ans;
     if(s1[0] == s2[0]) {
-        ans = 1 + lcsHelper(s1+1, s2+1, m-1, n-1, arr);
+        ans = 1 + lcsHelper(s1.substr(1), s2.substr(1), m-1, n-1, arr);
     } else {
-        int option1 = lcsHelper(s1, s2+1, m, n-1, arr);
-        int option2 = lcsHelper(s1+1, s2, m-1, n, arr);
+        int option1 = lcsHelper(s1, s2.substr(1), m, n-1, arr);
+        int option2 = lcsHelper(s1.substr(1), s2, m-1, n, arr);
         ans = max(option1, option2);
     }
     arr[m][n] = ans;
     return ans;
 }
 
-int lcs(char* s1, char* s2) {
-    int m = strlen(s1);
-    int n = strlen(s2);
+int lcs(string s1, string s2) {
+    int m = s1.length();
+    int n = s2.length();
     int** arr = new int*[m+1];
     for(int i=0;i<=m;++i)
         arr[i] = new int[n+1];
