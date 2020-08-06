@@ -6,7 +6,8 @@ void printChoices() {
     cout<<"1. GENERTATE TREE"<<endl;
     cout<<"2. PRINT SEGMENT TREE"<<endl;
     cout<<"3. UPDATE TREE"<<endl;
-    cout<<"4. EXIT"<<endl;
+    cout<<"4. QUERY ON TREE:"<<endl;
+    cout<<"5. EXIT"<<endl;
 }
 
 void generateTree(int* arr, int* tree, int start, int end, int treeNode) {
@@ -39,6 +40,20 @@ void updateTree(int* arr, int* tree, int start, int end, int treeNode, int index
     tree[treeNode] = tree[2*treeNode] + tree[2*treeNode + 1];
 }
 
+int query(int* tree, int start, int end, int treeNode, int left, int right) {
+
+    if(start > right || end < left )
+        return 0;
+
+    if(start >= left && end <= right)
+        return tree[treeNode];
+
+    int mid = (start + end) / 2;
+    int ans1 = query(tree, start, mid, 2*treeNode, left, right);
+    int ans2 = query(tree, mid + 1, end, 2*treeNode + 1, left, right);
+    return ans1 + ans2;
+}
+
 void printTree(int* tree, int n) {
     cout<<"TREE:"<<endl;
     for(int i=1;i<n;++i)
@@ -48,7 +63,7 @@ void printTree(int* tree, int n) {
 
 int main() {
     cout<<"Enter the number of values"<<endl;
-    int n, index, value;
+    int n, index, value, left, right, ans;
     cin>>n;
     cout<<"Enter the values"<<endl;
     int arr[n], tree[2*n];
@@ -77,6 +92,12 @@ int main() {
                 printTree(tree, 2*n);
                 break;
             case 4:
+                cout<<"ENTER START AND END INDEX FOR QUERY"<<endl;
+                cin>>left>>right;
+                ans = query(tree, 0, n-1, 1, left, right);
+                cout<<"ANSWER OF QUERY: "<<ans<<endl<<endl;
+                break;
+            case 5:
                 return 0;
         }
     }
