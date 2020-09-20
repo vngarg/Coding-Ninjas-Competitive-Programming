@@ -1,3 +1,5 @@
+// GCD(a, b) = GCD(b, a%b) given that a > b  
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -12,8 +14,8 @@ int main() {
     int a, b;
     cin>>a>>b;
 
-    int x = min(a, b);
-    int y = max(a, b);
+    int x = max(a, b);
+    int y = min(a, b);
     cout<<"GCD of "<<a<<" and "<<b<<" is: "<<GCD(x, y)<<endl;
     return 0;
 }
