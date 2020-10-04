@@ -1,6 +1,6 @@
-![star](https://img.shields.io/github/stars/vngarg/Movie-Finder) 
-![issues](https://img.shields.io/github/issues/vngarg/Movie-Finder) 
-![fork](https://img.shields.io/github/forks/vngarg/Movie-Finder)
+![star](https://img.shields.io/github/stars/vngarg/CPP-Programs) 
+![issues](https://img.shields.io/github/issues/vngarg/CPP-Programs) 
+![fork](https://img.shields.io/github/forks/vngarg/CPP-Programs)
 ![dev](https://img.shields.io/badge/Developed%20by%20-Shlok%20Garg-orange)
 ![love](https://img.shields.io/badge/open%20%20source-%E2%9D%A4-red)
 
