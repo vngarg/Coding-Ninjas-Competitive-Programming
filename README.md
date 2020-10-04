@@ -13,6 +13,6 @@ This repository contains the codes of all the questions which I solved during my
 - Segment Tree
 - Sorting Algorithms
 - Strings
-- TRIES & XOR
-It also contains one common category containing some general and very common questions.
+- TRIES & XOR<br />
+There is this one folder which contains some general and very common questions.
 - General Questions
