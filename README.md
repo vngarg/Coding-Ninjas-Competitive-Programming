@@ -1,6 +1,6 @@
-![star](https://img.shields.io/github/stars/vngarg/CPP-Programs) 
-![issues](https://img.shields.io/github/issues/vngarg/CPP-Programs) 
-![fork](https://img.shields.io/github/forks/vngarg/CPP-Programs)
+![star](https://img.shields.io/github/stars/vngarg/Coding-Ninjas-Competitive-Programming) 
+![issues](https://img.shields.io/github/issues/vngarg/Coding-Ninjas-Competitive-Programming) 
+![fork](https://img.shields.io/github/forks/vngarg/Coding-Ninjas-Competitive-Programming)
 ![dev](https://img.shields.io/badge/Developed%20by%20-Shlok%20Garg-orange)
 ![love](https://img.shields.io/badge/open%20%20source-%E2%9D%A4-red)
 
